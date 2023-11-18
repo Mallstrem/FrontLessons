@@ -1,0 +1,43 @@
+.flex-container {
+    background-color: lightgrey;
+    padding: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start; 
+    flex-wrap: wrap;
+    height: 300px;
+    align-items: center;
+}
+/*justify-content: space-around, between, evenly*/
+
+.flex-el {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 24px;
+    flex-grow: 1;
+}
+
+.bg-blue {
+    background-color: blue;
+    order: 1;
+}
+
+.bg-orange {
+    background-color: orange;
+    order: 3;
+}
+
+.bg-green {
+    background-color: green;
+    align-self: flex-end;
+}
+
+.bg-violet {
+    background-color: violet;
+    flex-grow: 2;
+}
+
+.bg-pink {
+    background-color: pink;
+}

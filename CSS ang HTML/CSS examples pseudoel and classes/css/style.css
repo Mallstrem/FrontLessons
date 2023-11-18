@@ -1,0 +1,39 @@
+/*Псевдокласс last-child*/
+.list li:last-child a {
+    color: red;
+}
+
+.list li:first-child a {
+    color: orange;
+}
+
+.list li:nth-child(odd ) a {
+    /*evan, конкретное число*/
+    color: blueviolet;
+}
+
+.list a:hover {
+    color: red;
+}
+
+.list li:not(.not-example) a {
+    color: brown;
+}
+
+/*Псевдоэлементы*/
+.list {
+    list-style: none;
+}
+
+.list li::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    margin-right: 10px;
+}
+
+.list li::after {
+    content: "Text";
+}

@@ -1,0 +1,46 @@
+/*
+    Приоритеты:
+    * {0}
+    teg {1}
+    .class-name {2}
+    #id-name {3}
+    inline-style
+
+    Можно комбинировать .class-name h1 - приоритеты суммируются
+*/
+
+h1 {
+    color: orange;
+}
+
+mark {
+    background-color: blueviolet;
+    font-size: 18px;
+}
+
+p mark {
+    background-color: aqua;
+}
+
+.text {
+    text-transform: uppercase;
+    color: gray !important; /*Максимальный приоритет, всех перебьет, последним возьмется самый низкий в коде*/
+    font-weight: bold;
+}
+
+.text-large {
+    width: 700px;
+}
+
+.text-small {
+    width: 300px;
+}
+
+p {
+    color: blue
+}
+
+/*Айдишник может называться также, как и класс*/
+#text {
+    color: lightseagreen;
+}

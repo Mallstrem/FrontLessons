@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home page</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 10px;
+            background-color: lightblue;
+            grid-template-columns: [site-left] 1fr [content-start] 200px [content-end] 1fr [site-right];
+            grid-template-rows: [content-top] repeat(10, 100px) [content-bottom];
+        }
+
+        .item3 {
+            background-color: wheat;
+            grid-column: content-start;
+            grid-row: content-top / content-bottom;
+        }
+
+
+
+    </style>
+
+    <div class="grid-container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+        <div class="item item11">11</div>
+        <div class="item item12">12</div>
+        <div class="item item13">13</div>
+        <div class="item item14">14</div>
+        <div class="item item15">15</div>
+    </div>
+</body>
+</html>
