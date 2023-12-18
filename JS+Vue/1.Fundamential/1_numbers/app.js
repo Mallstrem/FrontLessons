@@ -86,3 +86,15 @@ value = Boolean('bbxgf'); // true
 value = Boolean(undefined); // false
 value = Boolean([]); // true
 
+// Numbers
+const num1 = 10;
+const num2 = 20;
+let value2;
+// % - остаток от деления
+// ++ и += тоже работают
+// 0.6 + 0.7 = 1.2999999999999998
+// value.tofixed(1); - округлит до одного знака после запятой и превратит в стринг.)
+
+// Math - объект для работы с математикой
+// Math.PI;
+// Math.rendom();
