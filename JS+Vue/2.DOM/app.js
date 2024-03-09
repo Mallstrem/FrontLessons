@@ -79,4 +79,57 @@ document.body.appendChild(fragment);
 
 // Удаление элементов
 
+console.clear();
 
+// События
+// Events - любое действие пользователя (клики, ввод и т.д.)
+// У отдельных элементов свои события
+
+const btn = document.querySelector("button");
+// btn.onclick = function() {
+//     console.log("clicl");
+// }
+btn.addEventListener("click", function(e) {
+    console.log(e);
+});
+
+// Снять со ссылки перехоод страницы
+// e.preventDefault();
+
+// Удаление события
+// link.removeEventList("click");
+
+const container = document.querySelector(".container");
+
+btn.addEventListener("click", e => {
+    const div = document.createElement("div");
+    const nestedBtn = document.createElement("button");
+    div.textContent = Math.random();
+    nestedBtn.textContent = "click me";
+    div.appendChild(nestedBtn);
+    container.appendChild(div);
+});
+
+container.addEventListener("click", e => {
+    
+    if (e.target.tagName === 'BUTTON')
+        console.log(e.target);
+});
+
+// Всплытие события
+const btn_ = document.querySelector(".btn");
+const wrap = document.querySelector(".wrap");
+
+btn_.addEventListener("click", e => {
+    e.stopPropagation(); // Чтобы не срабатывали собития родителя (оберточного блока)
+    console.log("click_btn");
+});
+
+wrap.addEventListener("click", e => {
+    console.log("click wrap"); // Сначала события ребенка выполнятся, потом - родителя
+}, 
+true);
+
+// Погружение - по умолчанию не отслеживается
+// В addListener добавить третий параметр (объект), тогда будет отслеживаться и погружение
+// Сначала погружение, потом всплытие
